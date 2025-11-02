@@ -27,8 +27,3 @@
 ```bash
 # MicroPython (Thonny): copiar src/main.py para a placa e rodar
 # C (Pico SDK): ver docs/compilacao.md
-
-## 4. Como executar
-```bash
-# MicroPython (Thonny): copiar src/main.py para a placa e rodar
-# C (Pico SDK): ver docs/compilacao.md
