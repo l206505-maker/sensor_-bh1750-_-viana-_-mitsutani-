@@ -49,3 +49,39 @@
 > - [ ] Testes em `test/` com instruções  
 > - [ ] `relatorio.md` com lições aprendidas
 
+## 7. Estrutura do Repositório
+
+O projeto segue o padrão definido pela disciplina EA801 — Sistemas Embarcados, 
+visando padronizar as entregas e facilitar o reuso dos códigos e documentação.
+
+Todos os arquivos de código devem estar em src/.
+Diagramas, fotos, gráficos e documentos vão em docs/.
+Scripts ou logs de teste ficam em test/.
+O relatório técnico (relatorio.md) documenta todo o processo de engenharia.
+
+Mantenha os nomes dos arquivos em minúsculas, sem acentos ou espaços, usando _ ou -.
+
+
+template_sensor/
+├── README.md          → Descrição completa do projeto (sensor, ligações, execução e checklist)
+├── relatorio.md       → Relatório técnico da dupla (resultados, análise e conclusões)
+├── LICENSE            → Licença MIT de uso e distribuição
+├── .gitignore         → Regras para ignorar arquivos temporários e binários
+│
+├── docs/              → Documentação e mídias
+│   ├── ligacao.jpg    → Diagrama ou foto da ligação na BitDogLab
+│   ├── esquema.pdf    → Esquemático opcional
+│   └── outros arquivos de apoio
+│
+├── src/               → Códigos-fonte principais
+│   ├── main.py        → Código principal (MicroPython)
+│   ├── main.c         → Versão alternativa (C / Pico SDK)
+│   ├── exemplos/      → Códigos ilustrativos adicionais
+│   └── bibliotecas/   → Drivers, módulos auxiliares
+│
+└── test/              → Testes e validações
+    ├── test_basico.py → Teste de leitura e resposta do sensor
+    ├── test_ruido.py  → Avaliação de ruído ou estabilidade
+    └── logs/          → Registros experimentais, dados e gráficos
+
+
