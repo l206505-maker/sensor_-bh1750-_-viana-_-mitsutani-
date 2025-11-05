@@ -38,8 +38,9 @@
 ![conexoes](docs/conexoes.jpg)
 
 ## 3. Dependências
-- MicroPython/C versão:
-- Bibliotecas utilizadas:
+- MicroPython/C versão: Arduino IDE 2.x / ESP32 Arduino Core
+- Bibliotecas utilizadas: - `Wire.h` (biblioteca I2C nativa do Arduino)
+                          - `BH1750.h` (biblioteca específica para o sensor)
 - Como instalar (passo a passo):
 
 ## 4. Como executar
