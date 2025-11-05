@@ -15,7 +15,8 @@
 
 ## 2. Conexões de hardware
 - Tabela indicando as conexões entre BitDogLab e sensor:
-  | Pino BitDogLab | Pino BH1750 | Função        | Observações                     |
+  
+| Pino BitDogLab | Pino BH1750 | Função        | Observações                     |
 |----------------|-------------|---------------|---------------------------------|
 | 3.3V           | VCC         | Alimentação   | Tensão de operação 3.3V         |
 | GND            | GND         | Terra         | Referência comum                |
