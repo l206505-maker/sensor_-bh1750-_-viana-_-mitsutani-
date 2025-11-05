@@ -43,6 +43,16 @@
                           - `BH1750.h` (biblioteca específica para o sensor)
 - Como instalar (passo a passo):
 
+### Instalação manual (GitHub):
+1. Acesse: https://github.com/claws/BH1750
+2. Baixe o repositório como ZIP
+3. No Arduino IDE: **Sketch** → **Incluir Biblioteca** → **Adicionar Biblioteca .ZIP...**
+4. Selecione o arquivo ZIP baixado
+
+### Verificação da instalação:
+Após a instalação, verifique se a biblioteca está disponível em:
+**Arquivo** → **Exemplos** → **BH1750** → **BH1750test**
+
 ## 4. Como executar
 ```bash
 # MicroPython (Thonny): copiar src/main.py para a placa e rodar
