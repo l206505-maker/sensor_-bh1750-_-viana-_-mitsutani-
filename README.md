@@ -1,19 +1,37 @@
-# <NOME DO SENSOR> — Sensores na BitDogLab
+# <BH1750> — Sensores na BitDogLab
 
-**Dupla:** Nome A (RA / @usuario), Nome B (RA / @usuario)  
+**Dupla:** Lívia Viana (206505 / @l206505-maker), Helena Mitsutani (187828 / @helenamit)  
 **Turma:** EA801 — 2025S2  
-**Repositório:** (URL deste repo)
+**Repositório:** ([URL deste repo](https://github.com/l206505-maker/sensor_-bh1750-_-viana-_-mitsutani-/edit/main/README.md))
 
 ## 1. Descrição do sensor
-- Fabricante / modelo:
-- Princípio de funcionamento:
-- Tensão/consumo típicos:
-- Faixa de medição / resolução:
-- Datasheet (URL):
+- Fabricante / modelo: ROHM Semiconductor / BH1750FVI
+- Princípio de funcionamento: Sensor digital de intensidade luminosa que utiliza um fotodiodo e um conversor ADC integrado para medir a luz ambiente. O sensor converte a luz incidente em sinal elétrico e processa digitalmente através de interface I2C.
+- Tensão/consumo típicos: 2.4V - 3.6V (3.3V recomendado)
+                          Corrente consumida: 120μA em operação, 1μA em modo sleep
+- Faixa de medição / resolução: 1 - 65535 lux
+                                Resolução: 1 lx (alta precisão), 0.5 lx (alta precisão mode 2)
+- Datasheet (URL): https://www.mouser.com/datasheet/2/348/bh1750fvi-e-186247.pdf
 
 ## 2. Conexões de hardware
 - Tabela indicando as conexões entre BitDogLab e sensor:
+  | Pino BitDogLab | Pino BH1750 | Função        | Observações                     |
+|----------------|-------------|---------------|---------------------------------|
+| 3.3V           | VCC         | Alimentação   | Tensão de operação 3.3V         |
+| GND            | GND         | Terra         | Referência comum                |
+| GPIO21         | SDA         | Dados I2C     | Serial Data                     |
+| GPIO22         | SCL         | Clock I2C     | Serial Clock                    |
+| GND            | ADDR        | Endereço I2C  | Define endereço como 0x23       |
+
 - Observações (resistores, alimentação externa, níveis lógicos):
+
+- Resistores: Não são necessários resistores externos, pois a BitDogLab já possui pull-ups no barramento I2C
+- Alimentação: Utilizar exclusivamente 3.3V da BitDogLab - não conectar em 5V
+- Níveis lógicos: Compatível com 3.3V da BitDogLab
+- Endereço I2C:
+    ADDR conectado ao GND: endereço 0x23 (padrão)
+    ADDR conectado ao VCC: endereço 0x5C
+- Interface: Comunicação puramente digital via I2C, não requer componentes externos adicionais
 
 **Tabela de conexões (imagem em `docs/`):**  
 ![conexoes](docs/conexoes.jpg)
